@@ -1,0 +1,51 @@
+name:                fair-miniKanren
+version:             0.1.0.0
+github:              "kajigor/uKanren-transformation"
+license:             BSD3
+author:              "Peter Lozov"
+maintainer:          "lozov.peter@gmail.com"
+copyright:           "2020 Peter Lozov"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://https://github.com/Lozov-Petr/2021-PEPM-fair-miniKanren>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- process
+- temporary
+- text
+- fgl
+- graphviz
+- mtl
+- extra
+- directory
+- timeit
+- pretty-show
+
+library:
+  source-dirs:
+  - src/
+  - src/core/
+  - test/
+  - test/resources/
+
+executables:
+  fair:
+    main: test/Main.hs
+    source-dir:
+    - src/
+    - src/core/
+    - test/
+    - test/resources/
+    dependencies: fair-miniKanren
